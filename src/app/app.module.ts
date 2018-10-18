@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { LoguinComponent } from './loguin/loguin.component';
 import { MaterialModule } from './material/material.module';
 import { HomeComponent } from './home/home.component';
+import { LowerCasePipe } from './shared/pipes/lower-case.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoguinComponent,
-    HomeComponent
+    HomeComponent,
+    LowerCasePipe
   ],
   imports: [
     BrowserModule,
