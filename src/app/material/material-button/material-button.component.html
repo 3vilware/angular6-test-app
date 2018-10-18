@@ -1,0 +1,24 @@
+<h3>Botones normalones</h3>
+<div>
+    <button> Basico </button>
+    <button mat-button> MatButton </button>
+    <button mat-button color="primary"> Primary </button>
+    <!-- test de binding -->
+    <button mat-raised-button color="primary" [disabled]="formulario.valido">Raised</button>
+</div>
+
+<h3>Botones con iconos</h3>
+<div>
+    <button (click)="onClick($event)">
+        <mat-icon>grade</mat-icon>
+    </button>
+    <button mat-icon-button (click)="onClick()">
+            <mat-icon>grade</mat-icon>
+    </button>
+    <button mat-icon-button color="primary" (click)="onClick($event)">
+            <mat-icon>grade</mat-icon>
+    </button>
+    <button mat-raised-button color="primary">
+            <mat-icon>grade</mat-icon>
+    </button>
+</div>

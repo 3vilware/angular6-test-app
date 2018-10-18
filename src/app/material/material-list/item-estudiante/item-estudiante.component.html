@@ -1,0 +1,10 @@
+<!-- Se puede usar fragmentos de modulo para importar a otros modulos
+    Este modulo va a material-list html en la ultima instrucción -->
+    
+<mat-list-item *ngFor="let estudiante of listaEstudiantes"
+                (click)="onClick(estudiante)">
+  <img  mat-line mat-list-avatar src="http://www.i2clipart.com/cliparts/1/7/f/8/12804517f8f0dc6534e1bea4ba7759d4cbfbb7.png" alt="">
+  <span *ngIf="estudiante1.nombre" mat-line>{{estudiante.nombre}}</span> 
+  <span *ngIf="!estudiante1.nombre" mat-line>{{estudiante.nombre}}</span> 
+  <span mat-line>{{estudiante.ciudad}}</span>
+</mat-list-item>

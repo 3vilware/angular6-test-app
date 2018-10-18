@@ -1,0 +1,32 @@
+<mat-list>
+  <mat-list-item>
+    <img  mat-line mat-list-avatar src="http://www.i2clipart.com/cliparts/1/7/f/8/12804517f8f0dc6534e1bea4ba7759d4cbfbb7.png" alt="">
+    <!-- Version de if en angular  si es no omite esa propiedad-->
+    <span *ngIf="estudiante1.nombre" mat-line>{{estudiante1.nombre}}</span> 
+    <span *ngIf="!estudiante1.nombre" mat-line>{{estudiante1.nombre}}</span> 
+    <span mat-line>{{estudiante1.ciudad}}</span>
+  </mat-list-item>
+  <mat-list-item>
+      <img  mat-line mat-list-avatar src="http://www.i2clipart.com/cliparts/1/7/f/8/12804517f8f0dc6534e1bea4ba7759d4cbfbb7.png" alt="">
+      <span mat-line>Armando Gomez</span> 
+      <span mat-line>META</span>
+  </mat-list-item>
+
+<!-- Estructura for para angular en template-->
+  <mat-list-item *ngFor="let estudiante of listaEstudiantes">
+    <img  mat-line mat-list-avatar src="http://www.i2clipart.com/cliparts/1/7/f/8/12804517f8f0dc6534e1bea4ba7759d4cbfbb7.png" alt="">
+    <span *ngIf="estudiante1.nombre" mat-line>{{estudiante.nombre}}</span> 
+    <span *ngIf="!estudiante1.nombre" mat-line>{{estudiante.nombre}}</span> 
+    <span mat-line>{{estudiante.ciudad}}</span>
+  </mat-list-item>
+
+</mat-list>
+
+<!-- Se usa el selector dentro de item-estudiante-components para
+    invocar app-item-estudiante -->
+<mat-list>
+  <app-item-estudiante *ngFor="let est of listaEstudiantes"
+   [estudiante] = "est"
+   (onMouseClick)="onMouseClick($event)">
+  </app-item-estudiante>
+</mat-list>
